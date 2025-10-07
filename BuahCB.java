@@ -5,8 +5,12 @@ public class BuahCB{
     static Scanner in = new Scanner(System.in);
 
     static String daftar[] = {"Salak","Mangga","Apel","Jambu"};
-    static int stok[] = {12,13,14,15};
-    static int harga[] = {10000,12000,15000,16000};
+    static  int[][] data = {
+            {12, 10000},  
+            {13, 12000},  
+            {14, 15000},  
+            {15, 16000}   
+        };
     public static void main(String[] args) {
         String lanjut = "Y";
 
@@ -21,7 +25,7 @@ public class BuahCB{
 
             if (pilih == 1) {
                 System.out.println("-------- Daftar Buah --------");
-                System.out.println("Jenis " + " Sisa(kg) " + " Per Kilo");
+                System.out.println("Jenis \t Sisa(kg) \t Per Kilo");
                 tampilkanDaftar();
                 System.out.println("-----------------------------");
 
@@ -49,8 +53,8 @@ public class BuahCB{
     }
 
     static void tampilkanDaftar(){
-        for (int i = 0; i < daftar.length; i++) {
-            System.out.println(daftar[i] + " \t "+ stok[i] + " \t " + harga[i]);
+       for (int i = 0; i < daftar.length; i++) {
+            System.out.println(daftar[i] + "\t " + data[i][0] + " \t\t " + data[i][1]);
         }
     }
 
